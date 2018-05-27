@@ -1,10 +1,9 @@
 # QRCode
 
-**TODO: Add description**
+generate qrcode util
 
 ## Installation
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
 by adding `qrcode` to your list of dependencies in `mix.exs`:
 
 ```elixir
@@ -15,7 +14,8 @@ def deps do
 end
 ```
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/qrcode](https://hexdocs.pm/qrcode).
+## Usage
 
+```elixir
+QRCode.to_png_file("hello world", "/Users/hello/tmp/helloworld.png")
+```
