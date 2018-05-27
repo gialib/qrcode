@@ -1,4 +1,4 @@
-# Qrcode
+# QRCode
 
 **TODO: Add description**
 

@@ -1,6 +1,6 @@
-defmodule QrcodeTest do
+defmodule QRCodeTest do
   use ExUnit.Case
-  doctest Qrcode
+  doctest QRCode
 
   test "greets the world" do
 

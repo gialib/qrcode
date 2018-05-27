@@ -1,4 +1,4 @@
-defmodule Qrcode.MixProject do
+defmodule QRCode.MixProject do
   use Mix.Project
 
   def project do
