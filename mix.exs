@@ -10,6 +10,7 @@ defmodule QRCode.MixProject do
       deps: deps(),
       name: "QRCode",
       description: "Generate qrcode utils",
+      package: package()
     ]
   end
 
@@ -17,6 +18,14 @@ defmodule QRCode.MixProject do
   def application do
     [
       extra_applications: [:logger]
+    ]
+  end
+
+  def package do
+    [
+      maintainers: ["happy"],
+      licenses: ["MIT"],
+      links: %{"Github" => "https://github.com/gulib/qrcode"}
     ]
   end
 
