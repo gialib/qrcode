@@ -31,7 +31,7 @@ defmodule QRCode.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:qrcode_erl, path: "vendor/qrcode_erl", runtime: false}
+
     ]
   end
 end
