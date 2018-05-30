@@ -24,7 +24,7 @@ defmodule QRCode.MixProject do
     [
       maintainers: ["happy"],
       licenses: ["MIT"],
-      links: %{"Github" => "https://github.com/gulib/qrcode"}
+      links: %{"Github" => "https://github.com/gialib/qrcode"}
     ]
   end
 
