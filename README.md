@@ -9,7 +9,7 @@ by adding `qrcode` to your list of dependencies in `mix.exs`:
 ```elixir
 def deps do
   [
-    {:qrcode, "~> 0.1.0"}
+    {:qrcode, "~> 0.1.1"}
   ]
 end
 ```

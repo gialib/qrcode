@@ -14,7 +14,9 @@ defmodule QRCode do
   end
 
   def to_png_file(text, file_path, opts \\ []) when is_binary(text) do
-    :file.write_file(file_path, to_png(text, opts))
+    file_path
+    |> Path.expand
+    |> :file.write_file(to_png(text, opts))
   end
 
 end
