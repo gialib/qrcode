@@ -1,11 +1,13 @@
 defmodule QRCode do
 
   @doc """
+  to png content
+
   ## Params
 
-  * text 内容
+  * text  content
   * opts
-    * :quiet_zone 边缘的留白的宽度 默认为0
+    - :quiet_zone default is 0
   """
   def to_png(text, opts \\ []) when is_binary(text) do
     text
@@ -13,10 +15,19 @@ defmodule QRCode do
     |> :qrcode_erl_demo.simple_png_encode
   end
 
+  @doc """
+  to png file
+
+  ## Params
+
+  * text  content
+  * opts
+    - :quiet_zone default is 0
+  """
   def to_png_file(text, file_path, opts \\ []) when is_binary(text) do
-    file_path
-    |> Path.expand
-    |> :file.write_file(to_png(text, opts))
+    file_path = file_path |> Path.expand
+    file_path |> Path.dirname |> File.mkdir_p!
+    file_path |> :file.write_file(to_png(text, opts))
   end
 
 end

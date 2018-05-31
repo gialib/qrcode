@@ -4,7 +4,7 @@ defmodule QRCode.MixProject do
   def project do
     [
       app: :qrcode,
-      version: "0.1.1",
+      version: "0.1.2",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
       name: "QRCode",
