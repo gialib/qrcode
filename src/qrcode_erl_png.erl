@@ -12,7 +12,7 @@
 % See the License for the specific language governing permissions and
 % limitations under the License.
 
--module(qrcode_erl_demo).
+-module(qrcode_erl_png).
 
 %% Shows how to achieve HOTP/SHA1 with a mobile phone using Google Authenticator.
 %%
@@ -56,14 +56,14 @@ run(Domain, Passcode, Seconds) ->
 	Token = <<"otpauth://totp/", Domain/binary, "?period=", Period/binary, "&secret=", PasscodeBase32/binary>>,
 	?TTY({token, Token}),
 	QRCode = qrcode_erl:encode(Token),
-	Image = simple_png_encode(QRCode),
+	Image = simple_encode(QRCode),
 	Filename = "qrcode_erl.png",
 	ok = file:write_file(Filename, Image),
 	?TTY({image, filename:absname(Filename)}),
 	QRCode.
 
 %% Very simple PNG encoder for demo purposes
-simple_png_encode(#qrcode_erl{dimension = Dim, data = Data}) ->
+simple_encode(#qrcode_erl{dimension = Dim, data = Data}) ->
 	MAGIC = <<137, 80, 78, 71, 13, 10, 26, 10>>,
 	Size = Dim * 8,
 	IHDR = png_chunk(<<"IHDR">>, <<Size:32, Size:32, 8:8, 2:8, 0:24>>),

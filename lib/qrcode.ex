@@ -12,7 +12,7 @@ defmodule QRCode do
   def to_png(text, opts \\ []) when is_binary(text) do
     text
     |> :qrcode_erl.encode(Keyword.get(opts, :quiet_zone, 0))
-    |> :qrcode_erl_demo.simple_png_encode
+    |> :qrcode_erl_png.simple_encode
   end
 
   @doc """
